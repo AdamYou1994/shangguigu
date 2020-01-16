@@ -1,0 +1,32 @@
+server:
+  port: 80
+spring:
+  application:
+    name: webui
+  redis:
+    host: 192.168.235.101
+    jedis:
+      pool:
+        max-idle: 100
+  session:
+    store-type: redis
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+eureka:
+  client:
+   # register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+  instance:
+    prefer-ip-address: true
+
+oss.project.parent.folder: project
+oss.endpoint: http://oss-cn-shenzhen.aliyuncs.com
+oss.accessKeyId: LTAIRyb77bOaduym
+oss.accessKeySecret: oI7ziHH0vEcDT3SzPnROgzWLKXdmW6
+oss.bucketName: crowd190105
+oss.bucket.domain: http://crowd190105.oss-cn-shenzhen.aliyuncs.com
+
+ali.pay.app.id: "2016080400166558"
